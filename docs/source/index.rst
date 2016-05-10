@@ -10,7 +10,7 @@ Contents
 
 .. toctree::
     :glob:
-    :maxdepth: 2
 
-    2.5.2/*
-    2.6.1/*
+    source/2.6.1/config/*
+    source/2.6.1/exec/*
+    source/2.6.1/status/*
