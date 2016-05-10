@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Author: Jodie Putrino
 # Date last updated: 02/18/2016
 #
@@ -21,5 +22,16 @@ filename="${f%.*}"
 echo "Converting $f to $filename.rst"
 `pandoc $f -t html -o $filename.rst`
 # uncomment this line to delete the source file.
-rm $f
+#rm $f
+done
+
+FILES=*.html
+for f in $FILES
+do
+# extension="${f##*.}"
+filename="${f%.*}"
+echo "Converting $f to $filename.md"
+python html2text.py $f | $filename.md
+# uncomment this line to delete the source file.
+#rm $f
 done
