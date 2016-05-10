@@ -1,0 +1,33 @@
+<content type="text/html" title="&lt;list name&gt;"><body><div class="lrs-Path"> <div id="section_1" class="mt-page-section"><span id=".2Fconfig.2Fip.2FfilterList.2F.3Clist_name.3E"></span><h2 class="editable">/config/ip/filterList/&lt;list_name&gt;</h2> <div class="lrs-Subhead style-wrap"> <p>Use</p> </div> <p>Use to set the name of an IP filter list.</p> <div id="section_2" class="mt-page-section"><span id="Parameters"></span><h3 style="border:none" class="editable">Parameters</h3> <p>list_name: Name of filter list&#8212;Must use only a <a title="https://docs.lineratesystems.com/REST_API_Reference_Guide/000Getting_Started_with_the_REST_API/300Understanding_the_REST_Hierarchy#Limited_Character_Set" rel="internal" href="https://docs.lineratesystems.com/087Release_2.6/250REST_API_Reference_Guide/000Getting_Started_with_the_REST_API/300Understanding_the_REST_Hierarchy#Limited_Character_Set">limited character set</a>.</p> <div id="section_3" class="mt-page-section"><span id="Data_Type"></span><h4 style="border:none" class="editable">Data Type</h4> <p>subtree</p> </div></div><div id="section_4" class="mt-page-section"><span id="Default_Allowed"></span><h3 style="border:none" class="editable">Default Allowed</h3> <p>False</p> </div><div id="section_5" class="mt-page-section"><span id="Request_Methods"></span><h3 style="border:none" class="editable">Request Methods</h3> <p>GET, POST, PUT, DELETE</p> </div><div id="section_6" class="mt-page-section"><span id="Related"></span><h3 style="border:none" class="editable">Related</h3> <p><a title="filterList" rel="internal" href="https://docs.lineratesystems.com/087Release_2.6/250REST_API_Reference_Guide/config/ip/filterList">REST API Reference - /config/ip/filterList</a></p> <span>CLI Reference - </span><a href="/087Release_2.6/200CLI_Reference_Guide/Configure_Commands/IP_Mode_Commands" rel="internal" title="IP Mode Commands">IP Mode Commands</a> </div><div id="section_7" class="mt-page-section"><span id="Examples"></span><h3 style="border:none" class="editable">Examples</h3> <p>GET</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/config/ip/filterList/ifl-01</p> <p>GET Response</p> <pre>
+{&quot;/config/ip/filterList/ifl-01&quot;: {&quot;data&quot;: None,
+                                   &quot;default&quot;: False,
+                                   &quot;defaultAllowed&quot;: False,
+                                   &quot;deleteAllowed&quot;: True,
+                                   &quot;numChildren&quot;: 2,
+                                   &quot;type&quot;: &quot;subtree&quot;},
+ &quot;httpResponseCode&quot;: 200,
+ &quot;recurse&quot;: False,
+ &quot;requestPath&quot;: &quot;/config/ip/filterList/ifl-01&quot;}
+</pre> <p>GET (list children)</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/config/ip/filterList/ifl-01?op=list</p> <p>GET Response</p> <pre>
+{&quot;/config/ip/filterList/ifl-01&quot;: {&quot;children&quot;: {&quot;/config/ip/filterList/ifl-01/1.000000000 1.1.1.1 2&quot;: {&quot;default&quot;: False,
+                                                                                                         &quot;defaultAllowed&quot;: False,
+                                                                                                         &quot;deleteAllowed&quot;: True,
+                                                                                                         &quot;numChildren&quot;: 0,
+                                                                                                         &quot;type&quot;: &quot;uint32&quot;},
+                                                 &quot;/config/ip/filterList/ifl-01/2.000000000 0.0.0.0 0&quot;: {&quot;default&quot;: False,
+                                                                                                         &quot;defaultAllowed&quot;: False,
+                                                                                                         &quot;deleteAllowed&quot;: True,
+                                                                                                         &quot;numChildren&quot;: 0,
+                                                                                                         &quot;type&quot;: &quot;uint32&quot;}},
+                                   &quot;default&quot;: False,
+                                   &quot;defaultAllowed&quot;: False,
+                                   &quot;deleteAllowed&quot;: True,
+                                   &quot;numChildren&quot;: 2,
+                                   &quot;type&quot;: &quot;subtree&quot;},
+ &quot;httpResponseCode&quot;: 200,
+ &quot;recurse&quot;: False,
+ &quot;requestPath&quot;: &quot;/config/ip/filterList/ifl-01&quot;}
+</pre> <p>GET (recursively list children)</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/config/ip/filterList/ifl-01?level=recurse</p> <p>POST</p> <p class="plain lrs-Curl">curl -b cookie.jar --data @data.json -k -H &quot;Content-Type: application/json&quot; -X POST https://10.1.2.3:8443/lrs/api/v1.0/config/ip/filterList/ifl-01</p> <p>POST Response</p> <pre>
+{&quot;httpResponseCode&quot;: 200,
+  &quot;requestPath&quot;: &quot;/config/ip/filterList/ifl-01&quot;,
+  &quot;recurse&quot;:false}</pre> </div></div></div></body><body target="toc"><ol><li><a href="#.2Fconfig.2Fip.2FfilterList.2F.3Clist_name.3E" rel="internal">/config/ip/filterList/&lt;list_name&gt;</a><ol><li><a href="#Parameters" rel="internal">Parameters</a><ol><li><a href="#Data_Type" rel="internal">Data Type</a></li></ol></li><li><a href="#Default_Allowed" rel="internal">Default Allowed</a></li><li><a href="#Request_Methods" rel="internal">Request Methods</a></li><li><a href="#Related" rel="internal">Related</a></li><li><a href="#Examples" rel="internal">Examples</a></li></ol></li></ol></body></content>

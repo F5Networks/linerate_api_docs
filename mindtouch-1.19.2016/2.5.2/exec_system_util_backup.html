@@ -1,0 +1,36 @@
+<content type="text/html" title="backup"><head><style type="text/css">/*<![CDATA[*/.idf-toc div.wiki-toc {
+  float: right;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0px 0px 10px 10px;
+  width: 225px;
+}
+/*]]>*/</style></head><body><div class="lrs-Path"> <div id="section_1" class="mt-page-section"><span id=".2Fexec.2Fsystem.2Futil.2Fbackup"></span><h2 class="editable">/exec/system/util/backup</h2>  <p><span>The nodes below this one perform the functions described in this function overview.</span></p>  <p> <p>Back up the current configuration or system version.</p> <p class="lrs-Subhead">Use</p> <p>Use to create one of the following backup types:</p> <ul> <li>Quick&#8212;Backs up your current configuration (all files in /home/linerate, except the backups directory).</li> <li>Full&#8212;Backs up all files for the current version of F5<sup>&#174;</sup> LineRate<sup>&#174;</sup>, including all configuration and files. When you create a full backup, you can use it to do either a quick or full restore.</li> </ul> </p>  <div class="lrs-Note style-wrap"> <p><span class="lrs-Bold">Note: </span>Backups are specific to a version. You cannot use a version 2.3 backup to do a restore on a version 2.4 system.</p> </div> <p>You can save backups locally or to another server on your network.</p> <p>We recommend naming backups with the system version, date, time, and backup type (quick or full). For local backups, the system automatically adds .tar.bz2 as the file extension. For backups to another server, you should add the file extension of either .tbz or .tar.bz2 to your file name.</p> <p>To see existing local backups, use either of the following:</p> <ul> <li>CLI command&#8212;<span class="lrs-CommandWord">show backup list</span></li> <li>REST node&#8212;/status/system/util/backup/list or /status/system/util/backup/list-detail</li> </ul> <p><span>You can encrypt backups using AES-256 encryption</span></p> <ul> <li><span>CLI command</span>&#8212;<span>Use the&#160;</span><span class="lrs-CommandWord">encrypt&#160;</span><span>form of the command and provide a key. The same key is required for restoring the backup.</span></li> <li><span>REST node</span>&#8212;&#8203;Use the optional encryption key as described in the Data Key section.</li> </ul>  <div id="section_2" class="mt-page-section"><span id="Data_Type"></span><h3 style="border:none" class="editable">Data Type</h3> <p>subtree</p> </div><div id="section_3" class="mt-page-section"><span id="Request_Methods"></span><h3 style="border:none" class="editable">Request Methods</h3> <p>GET</p> </div><div id="section_4" class="mt-page-section"><span id="Related"></span><h3 style="border:none" class="editable">Related</h3> <p>CLI Reference - <a title="Backup Mode Commands" rel="internal" href="https://docs.lineratesystems.com/093Release_2.5/200CLI_Reference_Guide/Exec_Commands/Backup_Mode_Commands">Backup Mode Commands</a></p> </div><div id="section_5" class="mt-page-section"><span id="Examples"></span><h3 style="border:none" class="editable">Examples</h3> <p>GET</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/exec/system/util/backup</p> <p>GET Response</p> <pre>{&quot;/exec/system/util/backup&quot;: {&quot;data&quot;: None,
+                               &quot;default&quot;: False,
+                               &quot;defaultAllowed&quot;: False,
+                               &quot;deleteAllowed&quot;: False,
+                               &quot;numChildren&quot;: 2,
+                               &quot;type&quot;: &quot;subtree&quot;},
+ &quot;httpResponseCode&quot;: 200,
+ &quot;recurse&quot;: False,
+ &quot;requestPath&quot;: &quot;/exec/system/util/backup&quot;}
+</pre> <p>GET (list children)</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/exec/system/util/backup?op=list</p> <p>GET Response</p> <pre>{&quot;/exec/system/util/backup&quot;: {&quot;children&quot;: {&quot;/exec/system/util/backup/full&quot;: {&quot;default&quot;: False,
+                                                                                &quot;defaultAllowed&quot;: False,
+                                                                                &quot;deleteAllowed&quot;: False,
+                                                                                &quot;numChildren&quot;: 0,
+                                                                                &quot;type&quot;: &quot;string&quot;},
+                                             &quot;/exec/system/util/backup/home&quot;: {&quot;default&quot;: False,
+                                                                                &quot;defaultAllowed&quot;: False,
+                                                                                &quot;deleteAllowed&quot;: False,
+                                                                                &quot;numChildren&quot;: 0,
+                                                                                &quot;type&quot;: &quot;string&quot;}},
+                               &quot;default&quot;: False,
+                               &quot;defaultAllowed&quot;: False,
+                               &quot;deleteAllowed&quot;: False,
+                               &quot;numChildren&quot;: 2,
+                               &quot;type&quot;: &quot;subtree&quot;},
+ &quot;httpResponseCode&quot;: 200,
+ &quot;recurse&quot;: False,
+ &quot;requestPath&quot;: &quot;/exec/system/util/backup&quot;}
+</pre> <p>GET (recursively list children)</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/exec/system/util/backup?level=recurse</p>
+</div></div></div></body><body target="toc"><ol><li><a href="#.2Fexec.2Fsystem.2Futil.2Fbackup" rel="internal">/exec/system/util/backup</a><ol><li><a href="#Data_Type" rel="internal">Data Type</a></li><li><a href="#Request_Methods" rel="internal">Request Methods</a></li><li><a href="#Related" rel="internal">Related</a></li><li><a href="#Examples" rel="internal">Examples</a></li></ol></li></ol></body></content>

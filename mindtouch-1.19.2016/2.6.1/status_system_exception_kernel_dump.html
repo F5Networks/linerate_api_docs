@@ -1,0 +1,37 @@
+<content type="text/html" title="dump"><head><style type="text/css">/*<![CDATA[*/.idf-toc div.wiki-toc {
+  float: right;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0px 0px 10px 10px;
+  width: 225px;
+}
+/*]]>*/</style></head><body><div class="lrs-Path"> <div id="section_1" class="mt-page-section"><span id=".2Fstatus.2Fsystem.2Fexception.2Fkernel.2Fdump"></span><h2 class="editable">/status/system/exception/kernel/dump</h2>  <p><span>The nodes below this one perform the functions described in this function overview.</span></p>  <div class="lrs-Subhead style-wrap"> <p>Use</p> </div> <p>Use to view how kernel exceptions are handled.</p> <div id="section_2" class="mt-page-section"><span id="Data_Type"></span><h4 style="border:none" class="editable">Data Type</h4> <p>subtree</p> <div id="section_3" class="mt-page-section"><span id="Request_Methods"></span><h3 style="border:none" class="editable">Request Methods</h3> <p>GET</p> </div><div id="section_4" class="mt-page-section"><span id="Related"></span><h3 style="border:none" class="editable">Related</h3> <p>REST API Reference -&#160;<a title="exception" rel="internal" href="https://docs.lineratesystems.com/087Release_2.6/250REST_API_Reference_Guide/config/system/exception">exception</a></p> <p>CLI Reference -&#160;<a title="Show System Commands" rel="internal" href="https://docs.lineratesystems.com/087Release_2.6/200CLI_Reference_Guide/Exec_Commands/Show_Commands/Show_System_Commands">Show System Commands</a></p> </div><div id="section_5" class="mt-page-section"><span id="Examples"></span><h3 style="border:none" class="editable">Examples</h3> <p>GET</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/status/system/exception/kernel/dump</p> <p>GET Response</p> <pre>
+{&quot;/status/system/exception/kernel/dump&quot;: {&quot;data&quot;: None,
+                                           &quot;default&quot;: False,
+                                           &quot;defaultAllowed&quot;: False,
+                                           &quot;deleteAllowed&quot;: False,
+                                           &quot;numChildren&quot;: 2,
+                                           &quot;type&quot;: &quot;subtree&quot;},
+ &quot;httpResponseCode&quot;: 200,
+ &quot;recurse&quot;: False,
+ &quot;requestPath&quot;: &quot;/status/system/exception/kernel/dump&quot;}
+</pre> <p>GET (list children)</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/status/system/exception/kernel/dump?op=list</p> <p>GET Response</p> <pre>
+{&quot;/status/system/exception/kernel/dump&quot;: {&quot;children&quot;: {&quot;/status/system/exception/kernel/dump/full&quot;: {&quot;default&quot;: False,
+                                                                                                        &quot;defaultAllowed&quot;: False,
+                                                                                                        &quot;deleteAllowed&quot;: False,
+                                                                                                        &quot;numChildren&quot;: 0,
+                                                                                                        &quot;type&quot;: &quot;uint32&quot;},
+                                                         &quot;/status/system/exception/kernel/dump/text&quot;: {&quot;default&quot;: False,
+                                                                                                        &quot;defaultAllowed&quot;: False,
+                                                                                                        &quot;deleteAllowed&quot;: False,
+                                                                                                        &quot;numChildren&quot;: 0,
+                                                                                                        &quot;type&quot;: &quot;uint32&quot;}},
+                                           &quot;default&quot;: False,
+                                           &quot;defaultAllowed&quot;: False,
+                                           &quot;deleteAllowed&quot;: False,
+                                           &quot;numChildren&quot;: 2,
+                                           &quot;type&quot;: &quot;subtree&quot;},
+ &quot;httpResponseCode&quot;: 200,
+ &quot;recurse&quot;: False,
+ &quot;requestPath&quot;: &quot;/status/system/exception/kernel/dump&quot;}
+</pre> <p>GET (recursively list children)</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/status/system/exception/kernel/dump?level=recurse</p> </div></div></div></div></body><body target="toc"><ol><li><a href="#.2Fstatus.2Fsystem.2Fexception.2Fkernel.2Fdump" rel="internal">/status/system/exception/kernel/dump</a><ol><li><ol><li><a href="#Data_Type" rel="internal">Data Type</a></li></ol></li><li><a href="#Request_Methods" rel="internal">Request Methods</a></li><li><a href="#Related" rel="internal">Related</a></li><li><a href="#Examples" rel="internal">Examples</a></li></ol></li></ol></body></content>

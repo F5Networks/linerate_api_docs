@@ -1,0 +1,48 @@
+<content type="text/html" title="virtualIP"><head><style type="text/css">/*<![CDATA[*/.idf-toc div.wiki-toc {
+  float: right;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0px 0px 10px 10px;
+  width: 225px;
+}
+/*]]>*/</style></head><body><div class="lrs-Path"> <div id="section_1" class="mt-page-section"><span id=".2Fconfig.2Fapp.2Fproxy.2FvirtualIP"></span><h2 class="editable">/config/app/proxy/virtualIP</h2>  <p><span>The nodes below this one perform the functions described in this function overview.</span></p>  <p> <p>Create or modify a virtual IP for reverse proxy (load balancing) or forward proxy.</p> <div class="lrs-Subhead style-wrap"> <p>Use</p> </div> <p>For either a load balancing or forward proxy use case, the system requires at least one virtual IP. The virtual IP is a configuration object that represents the interface that clients connect to. You can create as many virtual IPs as you need. For an overview of how virtual IPs are used in a load balancing use case, see <a title="Release_2.0/100Getting_Started_Guide/100eADC_Overview" rel="internal" href="https://docs.lineratesystems.com/093Release_2.5/100Getting_Started_Guide/100LineRate_Overview">F5<sup>&#174;</sup> LineRate<sup>&#174;</sup> Overview</a>.</p> </p> <p> <p>We recommend giving each virtual IP a meaningful name that helps identify the virtual IP. For example, you might use the application or service type (such as serving similar web content) or security settings (such as SSL) in the name.</p> </p> <p> <p>Use to set the IP address or IP address range and port for the virtual IP. This designates the IP addresses that the system will accept traffic for.</p> <div class="lrs-Note style-wrap"> <p><span class="lrs-Bold">Note: </span>For most reverse proxy configurations, the IP address of each virtual IP must also be configured as an IP address on the data interface. If the IP address of the virtual IP is not also configured on a data interface, the system displays the following warning when you set the admin status to online: WARNING: virtual-ip test2 has ARP reply disabled until the IP address is configured on a system interface.</p> </div> <p>You can set either a specific IP address and port or a range of IP addresses for a specific port. The range includes both addresses you specify as the range start and end. A range cannot overlap any other range on the system for the same port.</p> <p>If a virtual IP has a specific IP assigned to it that falls within the range of another virtual IP, the system sends all traffic to the virtual IP with the specific IP address.</p> <div class="lrs-Caution style-wrap"> <p><span class="lrs-Bold">Caution:</span> When attaching a virtual IP to a forward proxy, the virtual IP must not include any of the system's own IP addresses. For a virtual IP with a single IP address, do not set the virtual IP's IP address to one of the system's own IP addresses. For a virtual IP with a range of addresses, you must ensure that the IP address range does not contain any of the system's own IP addresses. This may mean you need to break the virtual IP into multiple virtual IPs. See <a title="Configuring a range for a virtual IP with forward proxy" rel="internal" href="https://docs.lineratesystems.com/093Release_2.5/300kb/Configuring_a_range_for_a_virtual_IP_with_forward_proxy">Configuring a range for a virtual IP with forward proxy</a> for more detail and an example.</p> </div> <p>The system handles routed virtual IPs. Even if you set a large range of IP addresses for a virtual IP, the system only sends an ARP reply if an IP address in the range is configured on an interface. However, the system will accept traffic for any IP address in the range.</p></p> <div id="section_2" class="mt-page-section"><span id="Data_Type"></span><h4 style="border:none" class="editable">Data Type</h4> <p>subtree</p> <div id="section_3" class="mt-page-section"><span id="Request_Methods"></span><h3 style="border:none" class="editable">Request Methods</h3> <p>GET</p> </div><div id="section_4" class="mt-page-section"><span id="Related"></span><h3 style="border:none" class="editable">Related</h3> <a title="200CLI_Reference_Guide/Configure_Commands/Virtual_IP_Mode_Commands" rel="internal" href="https://docs.lineratesystems.com/093Release_2.5/200CLI_Reference_Guide/Configure_Commands/Virtual_IP_Mode_Commands">CLI Reference - Virtual IP Mode Commands</a> </div><div id="section_5" class="mt-page-section"><span id="Examples"></span><h3 style="border:none" class="editable">Examples</h3> <p>GET</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/config/app/proxy/virtualIP</p> <p>GET Response</p> <pre>
+{&quot;/config/app/proxy/virtualIP&quot;: {&quot;data&quot;: None,
+                                  &quot;default&quot;: False,
+                                  &quot;defaultAllowed&quot;: False,
+                                  &quot;deleteAllowed&quot;: False,
+                                  &quot;numChildren&quot;: 4,
+                                  &quot;type&quot;: &quot;subtree&quot;},
+ &quot;httpResponseCode&quot;: 200,
+ &quot;recurse&quot;: False,
+ &quot;requestPath&quot;: &quot;/config/app/proxy/virtualIP&quot;}
+</pre> <p>GET (list children)</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/config/app/proxy/virtualIP?op=list</p> <p>GET Response</p> <pre>
+{&quot;/config/app/proxy/virtualIP&quot;: {&quot;children&quot;: {&quot;/config/app/proxy/virtualIP/vip1&quot;: {&quot;default&quot;: False,
+                                                                                   &quot;defaultAllowed&quot;: False,
+                                                                                   &quot;deleteAllowed&quot;: True,
+                                                                                   &quot;numChildren&quot;: 11,
+                                                                                   &quot;type&quot;: &quot;string&quot;},
+                                                &quot;/config/app/proxy/virtualIP/vip2&quot;: {&quot;default&quot;: False,
+                                                                                     &quot;defaultAllowed&quot;: False,
+                                                                                     &quot;deleteAllowed&quot;: True,
+                                                                                     &quot;numChildren&quot;: 11,
+                                                                                     &quot;type&quot;: &quot;string&quot;},
+                                                &quot;/config/app/proxy/virtualIP/vip3&quot;: {&quot;default&quot;: False,
+                                                                                     &quot;defaultAllowed&quot;: False,
+                                                                                     &quot;deleteAllowed&quot;: True,
+                                                                                     &quot;numChildren&quot;: 11,
+                                                                                     &quot;type&quot;: &quot;string&quot;},
+                                                &quot;/config/app/proxy/virtualIP/vip4&quot;: {&quot;default&quot;: False,
+                                                                                     &quot;defaultAllowed&quot;: False,
+                                                                                     &quot;deleteAllowed&quot;: True,
+                                                                                     &quot;numChildren&quot;: 11,
+                                                                                     &quot;type&quot;: &quot;string&quot;},
+                                                },
+                                  &quot;default&quot;: False,
+                                  &quot;defaultAllowed&quot;: False,
+                                  &quot;deleteAllowed&quot;: False,
+                                  &quot;numChildren&quot;: 4,
+                                  &quot;type&quot;: &quot;subtree&quot;},
+ &quot;httpResponseCode&quot;: 200,
+ &quot;recurse&quot;: False,
+ &quot;requestPath&quot;: &quot;/config/app/proxy/virtualIP&quot;}
+</pre> <p>GET (recursively list children)</p> <p class="plain lrs-Curl">curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/config/app/proxy/virtualIP?level=recurse</p> </div></div></div></div></body><body target="toc"><ol><li><a href="#.2Fconfig.2Fapp.2Fproxy.2FvirtualIP" rel="internal">/config/app/proxy/virtualIP</a><ol><li><ol><li><a href="#Data_Type" rel="internal">Data Type</a></li></ol></li><li><a href="#Request_Methods" rel="internal">Request Methods</a></li><li><a href="#Related" rel="internal">Related</a></li><li><a href="#Examples" rel="internal">Examples</a></li></ol></li></ol></body></content>
