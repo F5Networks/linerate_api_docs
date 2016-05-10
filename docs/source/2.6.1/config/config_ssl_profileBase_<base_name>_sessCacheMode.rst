@@ -1,0 +1,120 @@
+<div class="lrs-Path">
+<div id="section_1" class="mt-page-section">
+<span id=".2Fconfig.2Fssl.2FprofileBase.2F.3Cbase_name.3E.2FsessCacheMode"></span>
+<h2 class="editable">/config/ssl/profileBase/&lt;base_name&gt;/sessCacheMode</h2>
+<p></p>
+<p>Set session cache memory size.</p>
+<div class="lrs-Subhead style-wrap">
+<p>Use</p>
+</div>
+<p>Use to improve performance for SSL connections by storing session keys. The system saves and can reuse an SSL session key for client connections. The cached session key lets the system establish the SSL connection to the same client, bypassing the normal SSL handshake process.</p>
+<p>This applies to SSL termination only. You set the amount of system RAM you want to use to store session keys. To determine the space needed to use session keys effectively, consider the following:</p>
+<ul>
+<li><p>The more active clients you have, the more space you need for the keys, which are generally about 2 KiB.</p></li>
+<li><p>To be beneficial, the cache must be large enough to store session keys between connections from the same client.</p></li>
+<li><p>Consider how many connections per second you expect and how much time you expect between the same client connecting multiple times.</p></li>
+</ul>
+<p>In a failover situation, where the primary system fails over to a secondary system, the session cache is not copied to the secondary system.</p>
+<p>You can use both session cache and session tickets at the same time. If the client supports session tickets, the system uses the session ticket. If the client does not support session tickets, the system uses session cache.</p>
+<div id="section_2" class="mt-page-section">
+<span id="Parameters"></span>
+<h3 class="editable" style="border:none">Parameters</h3>
+<p>base_name: Name of SSL profile base</p>
+</div>
+<div id="section_3" class="mt-page-section">
+<span id="Data_Key"></span>
+<h3 class="editable" style="border:none">Data Key</h3>
+<p>The data key contains one of the values defined in Data Values below.</p>
+<div class="lrs-Note style-wrap">
+<p><span class="lrs-Bold">Note: </span>When the default key is set to true, it means the object is set to its default. In this case, the system works as follows:</p>
+<ul>
+<li>On a PUT operation, the system ignores the data key. (Applicable only to /config nodes.)</li>
+<li>On a GET operation, the response only contains <span class="lrs-OutputWord">&quot;default&quot;: True</span> and does not contain the data key.</li>
+<li>If the object has a base, it inherits its setting from its base.</li>
+</ul>
+<p>See <a href="https://docs.lineratesystems.com/087Release_2.6/250REST_API_Reference_Guide/000Getting_Started_with_the_REST_API/300Understanding_the_REST_Hierarchy#Setting_Objects_to_Their_Default_(Default_Key)" title="Release_2.0/250REST_API_Reference_Guide/000Getting_Started_with_the_REST_API/300Understanding_the_REST_Hierarchy#Setting_Objects_to_Their_Default_(Default_Key)">Setting Objects to Their Default</a>.</p>
+</div>
+<div id="section_4" class="mt-page-section">
+<span id="Data_Type"></span>
+<h4 class="editable" style="border:none">Data Type</h4>
+<p>uint32</p>
+</div>
+<div id="section_5" class="mt-page-section">
+<span id="Default_Data_Value"></span>
+<h4 class="editable" style="border:none">Default Data Value</h4>
+<p>0</p>
+<p>An object uses the default data value when one of the following is true:</p>
+<ul>
+<li>For objects without bases—When the object's default key is true.</li>
+<li>For objects with bases—When the object's default key is true, and when the default key is true for all of the object's bases.</li>
+</ul>
+</div>
+<div id="section_6" class="mt-page-section">
+<span id="Data_Values"></span>
+<h4 class="editable" style="border:none">Data Values</h4>
+<div>
+<span>0 (No cache; cache disabled, </span><span>sessCacheSize node ignored</span><span>)</span>
+</div>
+<div>
+<span>1 (Auto size and currently is set to </span>10 MB [10485760 bytes];<span> sessCacheSize node ignored)</span>
+</div>
+<div>
+2 (Explicit size; uses the value in the sessCacheSize node)
+</div>
+</div>
+</div>
+<div id="section_7" class="mt-page-section">
+<span id="Default_Allowed"></span>
+<h3 class="editable" style="border:none">Default Allowed</h3>
+<p>True</p>
+</div>
+<div id="section_8" class="mt-page-section">
+<span id="Request_Methods"></span>
+<h3 class="editable" style="border:none">Request Methods</h3>
+<p>GET, PUT</p>
+</div>
+<div id="section_9" class="mt-page-section">
+<span id="Related"></span>
+<h3 class="editable" style="border:none">Related</h3>
+<p><a href="https://docs.lineratesystems.com/087Release_2.6/250REST_API_Reference_Guide/config/ssl" title="REST_API_Reference_Guide/config/ssl">REST API Reference - /config/ssl</a></p>
+<p><a href="https://docs.lineratesystems.com/087Release_2.6/200CLI_Reference_Guide/Configure_Commands/SSL_Mode_Commands" title="SSL Mode Commands">CLI Reference - SSL Mode Commands</a></p>
+</div>
+<div id="section_10" class="mt-page-section">
+<span id="Examples"></span>
+<h3 class="editable" style="border:none">Examples</h3>
+<p>GET</p>
+<p>curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/config/ssl/profileBase/spb-01/sessCacheMode</p>
+<p>GET Response</p>
+<pre><code>{&quot;/config/ssl/profileBase/spb-01/sessCacheMode&quot;:{&quot;default&quot;:true,
+                                                 &quot;type&quot;:&quot;uint32&quot;,
+                                                 &quot;numChildren&quot;:0,
+                                                 &quot;defaultAllowed&quot;:true,
+                                                 &quot;deleteAllowed&quot;:false},
+ &quot;httpResponseCode&quot;:200,
+ &quot;requestPath&quot;:&quot;/config/ssl/profileBase/spb-01/sessCacheMode&quot;,
+ &quot;recurse&quot;:false}</code></pre>
+<p>PUT</p>
+<p>curl -b cookie.jar --data @data.json -k -H &quot;Content-Type: application/json&quot; -X PUT https://10.1.2.3:8443/lrs/api/v1.0/config/ssl/profileBase/spb-01/sessCacheMode</p>
+<p>PUT Response</p>
+<pre><code>{&quot;httpResponseCode&quot;: 200,
+  &quot;requestPath&quot;: &quot;/config/ssl/profileBase/spb-01/sessCacheMode&quot;,
+  &quot;recurse&quot;:false}</code></pre>
+</div>
+</div>
+</div>
+<ol>
+<li><a href="#.2Fconfig.2Fssl.2FprofileBase.2F.3Cbase_name.3E.2FsessCacheMode">/config/ssl/profileBase/&lt;base_name&gt;/sessCacheMode</a>
+<ol>
+<li><a href="#Parameters">Parameters</a></li>
+<li><a href="#Data_Key">Data Key</a>
+<ol>
+<li><a href="#Data_Type">Data Type</a></li>
+<li><a href="#Default_Data_Value">Default Data Value</a></li>
+<li><a href="#Data_Values">Data Values</a></li>
+</ol></li>
+<li><a href="#Default_Allowed">Default Allowed</a></li>
+<li><a href="#Request_Methods">Request Methods</a></li>
+<li><a href="#Related">Related</a></li>
+<li><a href="#Examples">Examples</a></li>
+</ol></li>
+</ol>
