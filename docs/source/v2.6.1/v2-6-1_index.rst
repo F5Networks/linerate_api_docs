@@ -5,7 +5,8 @@ Contents
 --------
 
 .. toctree::
+    :glob:
 
-    config/*.md
-    exec/*.md
-    status/*.md
+    config/*
+    exec/*
+    status/*
