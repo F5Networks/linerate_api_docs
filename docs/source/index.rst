@@ -11,5 +11,5 @@ Contents
 .. toctree::
     :glob:
     
-    v2.6.1/*
-    v2.5.2/*
+    v2.6.1/v2-6-1_index.rst
+    v2.5.2/v2-5-2_index.rst
