@@ -11,6 +11,5 @@ Contents
 .. toctree::
     :glob:
     
-    config/*
-    exec/*
-    status/*
+    v2.6.1/*
+    v2.5.2/*
