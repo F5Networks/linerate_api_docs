@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>/config/app/health/monitor//interval &mdash; LineRate REST API  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LineRate REST API  documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> LineRate REST API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LineRate REST API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>/config/app/health/monitor/<name>/interval</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/v2.6.1/config/config_app_health_monitor_&lt;name&gt;_interval.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="config-app-health-monitor-name-interval">
+<span id="config-app-health-monitor-name-interval"></span><h1>/config/app/health/monitor/<name>/interval<a class="headerlink" href="#config-app-health-monitor-name-interval" title="Permalink to this headline">¶</a></h1>
+<p>Time to wait between health monitor probes.</p>
+<p>Use</p>
+<p>Use to set how often the health monitor probes the server. In setting the
+interval, consider how the interval affects both the server and F5® LineRate®.
+You do not want the health monitor probes to overwhelm either system by being
+too frequent or to not detect a problem with a server by being too infrequent.</p>
+<div class="section" id="parameters">
+<span id="parameters"></span><h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>name: Name of health monitor</p>
+</div>
+<div class="section" id="data-key">
+<span id="data-key"></span><h2>Data Key<a class="headerlink" href="#data-key" title="Permalink to this headline">¶</a></h2>
+<p>The data key contains the time in seconds (can be fractional).</p>
+<div class="section" id="data-type">
+<span id="data-type"></span><h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
+<p>double</p>
+</div>
+<div class="section" id="default-data-value">
+<span id="default-data-value"></span><h3>Default Data Value<a class="headerlink" href="#default-data-value" title="Permalink to this headline">¶</a></h3>
+<p>10.0</p>
+</div>
+</div>
+<div class="section" id="default-allowed">
+<span id="default-allowed"></span><h2>Default Allowed<a class="headerlink" href="#default-allowed" title="Permalink to this headline">¶</a></h2>
+<p>False</p>
+</div>
+<div class="section" id="request-methods">
+<span id="request-methods"></span><h2>Request Methods<a class="headerlink" href="#request-methods" title="Permalink to this headline">¶</a></h2>
+<p>GET, PUT</p>
+</div>
+<div class="section" id="related">
+<span id="related"></span><h2>Related<a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
+<p>[REST API Reference - /config/app/health/monitor](https://docs.lineratesystems
+.com/087Release_2.6/250REST_API_Reference_Guide/config/app/health/monitor)</p>
+<p>[CLI Reference - Health Monitor](https://docs.lineratesystems.com/087Release_2
+.6/200CLI_Reference_Guide/Configure_Commands/Health_Monitor_Mode_Commands)</p>
+</div>
+<div class="section" id="examples">
+<span id="examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>GET</p>
+<p>curl -b cookie.jar -k
+https://10.1.2.3:8443/lrs/api/v1.0/config/app/health/monitor/hm-01/interval</p>
+<p>GET Response</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;/config/app/health/monitor/hm-01/interval&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">,</span>
+                                                <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                                                <span class="s2">&quot;defaultAllowed&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                                                <span class="s2">&quot;deleteAllowed&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                                                <span class="s2">&quot;numChildren&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                                                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;double&quot;</span><span class="p">},</span>
+ <span class="s2">&quot;httpResponseCode&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+ <span class="s2">&quot;recurse&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+ <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/config/app/health/monitor/hm-01/interval&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>PUT</p>
+<p>curl -b cookie.jar &#8211;data &#64;data.json -k -H &#8220;Content-Type: application/json&#8221; -X
+PUT
+https://10.1.2.3:8443/lrs/api/v1.0/config/app/health/monitor/hm-01/interval</p>
+<p>PUT Response</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;httpResponseCode&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/config/app/health/monitor/hm-01/interval&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;recurse&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">}</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>/config/app/health/monitor/<name>/interval
+1. Parameters
+2. Data Key<ol>
+<li>Data Type</li>
+<li>Default Data Value
+3. Default Allowed
+4. Request Methods
+5. Related
+6. Examples</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, F5 Networks.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>/status/app/proxy/stats/data/virtualServer//httpProxyServerResp401 &mdash; LineRate REST API  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LineRate REST API  documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> LineRate REST API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LineRate REST API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>/status/app/proxy/stats/data/virtualServer/<name>/httpProxyServerResp401</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/v2.6.1/status/status_app_proxy_stats_data_virtualServer_&lt;name&gt;_httpProxyServerResp401.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="status-app-proxy-stats-data-virtualserver-name-httpproxyserverresp401">
+<span id="status-app-proxy-stats-data-virtualserver-name-httpproxyserverresp401"></span><h1>/status/app/proxy/stats/data/virtualServer/<name>/httpProxyServerResp401<a class="headerlink" href="#status-app-proxy-stats-data-virtualserver-name-httpproxyserverresp401" title="Permalink to this headline">¶</a></h1>
+<p>Use</p>
+<p>Use to view the number of HTTP responses with response code 401 received from
+the servers.</p>
+<div class="section" id="parameters">
+<span id="parameters"></span><h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>name: Name of virtual server object</p>
+</div>
+<div class="section" id="data-key">
+<span id="data-key"></span><h2>Data Key<a class="headerlink" href="#data-key" title="Permalink to this headline">¶</a></h2>
+<p>The data key contains the number of responses.</p>
+<div class="section" id="data-type">
+<span id="data-type"></span><h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
+<p>uint64</p>
+</div>
+</div>
+<div class="section" id="request-methods">
+<span id="request-methods"></span><h2>Request Methods<a class="headerlink" href="#request-methods" title="Permalink to this headline">¶</a></h2>
+<p>GET</p>
+</div>
+<div class="section" id="related">
+<span id="related"></span><h2>Related<a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
+<p>CLI Reference - [Show Virtual Server Commands](https://docs.lineratesystems.co
+m/087Release_2.6/200CLI_Reference_Guide/Exec_Commands/Show_Commands/Show_Virtu
+al_Server_Commands)</p>
+</div>
+<div class="section" id="examples">
+<span id="examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>GET</p>
+<p>curl -b cookie.jar -k https://10.1.2.3:8443/lrs/api/v1.0/status/app/proxy/stat
+s/data/virtualServer/vs-01/httpProxyServerResp401</p>
+<p>GET Response</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;/status/app/proxy/stats/data/virtualServer/vs-01/httpProxyServerResp401&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                                                                           <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                                                                           <span class="s2">&quot;defaultAllowed&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                                                                           <span class="s2">&quot;deleteAllowed&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                                                                           <span class="s2">&quot;numChildren&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                                                                           <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;uint64&quot;</span><span class="p">},</span>
+ <span class="s2">&quot;httpResponseCode&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+ <span class="s2">&quot;recurse&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+ <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/status/app/proxy/stats/data/virtualServer/vs-01/httpProxyServerResp401&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>/status/app/proxy/stats/data/virtualServer/<name>/httpProxyServerResp401
+1. Parameters
+2. Data Key<ol>
+<li>Data Type
+3. Request Methods
+4. Related
+5. Examples</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, F5 Networks.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

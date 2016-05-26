@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>/config/ssl/profileBase/&lt;base_name&gt;/certificates &mdash; LineRate REST API  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LineRate REST API  documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> LineRate REST API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LineRate REST API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>/config/ssl/profileBase/&lt;base_name&gt;/certificates</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/v2.6.1/config/config_ssl_profileBase_&lt;base_name&gt;_certificates.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="config-ssl-profilebase-base-name-certificates">
+<span id="config-ssl-profilebase-base-name-certificates"></span><h1>/config/ssl/profileBase/&lt;base_name&gt;/certificates<a class="headerlink" href="#config-ssl-profilebase-base-name-certificates" title="Permalink to this headline">¶</a></h1>
+<p>Use</p>
+<p>Applies only to SSL termination. A certificate to be presented as the identity
+of this system during SSL negotiations. A profile can have multiple primary
+certificates.</p>
+<p>See [certificates](https://docs.lineratesystems.com/087Release_2.6/250REST_API
+_Reference_Guide/config/certificates).</p>
+<div class="section" id="parameters">
+<span id="parameters"></span><h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>base_name: Name of profile base object</p>
+<div class="section" id="data-type">
+<span id="data-type"></span><h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
+<p>subtree</p>
+</div>
+<div class="section" id="default-data-value">
+<span id="default-data-value"></span><h3>Default Data Value<a class="headerlink" href="#default-data-value" title="Permalink to this headline">¶</a></h3>
+<p>0</p>
+<p>An object uses the default data value when one of the following is true:</p>
+<ul class="simple">
+<li>For objects without bases&#8211;When the object&#8217;s default key is true.</li>
+<li>For objects with bases&#8211;When the object&#8217;s default key is true, and when the default key is true for all of the object&#8217;s bases.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="request-methods">
+<span id="request-methods"></span><h2>Request Methods<a class="headerlink" href="#request-methods" title="Permalink to this headline">¶</a></h2>
+<p>GET</p>
+</div>
+<div class="section" id="related">
+<span id="related"></span><h2>Related<a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
+<p>[REST API Reference - /config/ssl](https://docs.lineratesystems.com/087Release
+_2.6/250REST_API_Reference_Guide/config/ssl)</p>
+<p>[CLI Reference - SSL Mode Commands](https://docs.lineratesystems.com/087Releas
+e_2.6/200CLI_Reference_Guide/Configure_Commands/SSL_Mode_Commands)</p>
+</div>
+<div class="section" id="examples">
+<span id="examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>GET</p>
+<p>curl -b cookie.jar -k
+https://host-128:8443/lrs/api/v1.0/config/ssl/profileBase/spb-01/certificates</p>
+<ol class="simple">
+<li>/config/ssl/profileBase/&lt;base_name&gt;/certificates
+1. Parameters<ol>
+<li>Data Type</li>
+<li>Default Data Value
+2. Request Methods
+3. Related
+4. Examples</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, F5 Networks.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

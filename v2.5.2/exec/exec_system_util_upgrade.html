@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>/exec/system/util/upgrade &mdash; LineRate REST API  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LineRate REST API  documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> LineRate REST API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LineRate REST API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>/exec/system/util/upgrade</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/v2.5.2/exec/exec_system_util_upgrade.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="exec-system-util-upgrade">
+<span id="exec-system-util-upgrade"></span><h1>/exec/system/util/upgrade<a class="headerlink" href="#exec-system-util-upgrade" title="Permalink to this headline">¶</a></h1>
+<p>Upgrade the system software.</p>
+<p>Use</p>
+<p>Use to upgrade LROS software to a new version. The upgrade will retain all of
+your configuration and lets you roll back to a previously installed software
+version using either of the following:</p>
+<ul class="simple">
+<li>CLI command: boot system</li>
+<li>REST node: /config/system/boot/version</li>
+</ul>
+<p>To subscribe to software release notifications, contact your sales account
+representative.</p>
+<p>Download the upgrade file, which has the extension .upg.gz, to the F5®
+LineRate® system or to a web server on your intranet. For where to go to
+download the upgrade file, see [Downloads](https://docs.lineratesystems.com/09
+3Release_2.5.2/100Getting_Started_Guide/120Installing_Proxy#Downloads).</p>
+<p>If you download the file to a web server on your intranet, you can copy the
+file to your F5® LineRate® system one of the following ways:</p>
+<ul class="simple">
+<li>Use scp to copy the file to the /home/linerate directory.</li>
+<li>Use the following REST node: /exec/system/util/<a class="reference external" href="https://docs.lineratesystems.com/093Release_2.5.2/250REST_API_Reference_Guide/exec/system/util/download">download</a>.</li>
+</ul>
+<p>Caution: We recommend upgrading during a maintenance window. The upgrade
+process causes a system reload. During the reload, you will lose all
+connections to the F5® LineRate® system for at least a few minutes.</p>
+<p>The upgrade command may also be used to install an earlier version of software
+(to &#8220;downgrade&#8221;) in limited circumstances. If the earlier version of software
+is already installed, you should use the boot system command to switch to that
+version of software. If the earlier version of software is not installed, the
+F5® LineRate® only supports installing the maintenance release immediately
+prior to the currently running software version via the upgrade process. To
+find the prior version of software that can be used with the upgrade process,
+see the release notes for your currently running software version.</p>
+<div class="section" id="data-key">
+<span id="data-key"></span><h2>Data Key<a class="headerlink" href="#data-key" title="Permalink to this headline">¶</a></h2>
+<p>The data key contains JSON-formatted content with the URI of the upgrade file:</p>
+<p>{ &#8220;img&#8221;: &lt;image_name&gt;, &#8220;filename&#8221;: &lt;file_name&gt; }</p>
+<ul class="simple">
+<li>The &lt;image_name&gt; points to the location of the downloaded upgrade file, which must match a file on the F5® LineRate® system. Use a relative path if the file is located below the /home/linerate directory. Use an absolute path if the file is located elsewhere.</li>
+<li>The &lt;file_name&gt; is the name of upgrade file the system uses internally for the upgrade process. As a best practice, the &lt;file_name&gt; should be the same as the &lt;image_name&gt;.</li>
+</ul>
+<div class="section" id="data-type">
+<span id="data-type"></span><h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
+<p>json</p>
+</div>
+<div class="section" id="default-value">
+<span id="default-value"></span><h3>Default Value<a class="headerlink" href="#default-value" title="Permalink to this headline">¶</a></h3>
+<p>&#8220;&#8221;</p>
+</div>
+</div>
+<div class="section" id="default-allowed">
+<span id="default-allowed"></span><h2>Default Allowed<a class="headerlink" href="#default-allowed" title="Permalink to this headline">¶</a></h2>
+<p>False</p>
+</div>
+<div class="section" id="request-methods">
+<span id="request-methods"></span><h2>Request Methods<a class="headerlink" href="#request-methods" title="Permalink to this headline">¶</a></h2>
+<p>PUT</p>
+</div>
+<div class="section" id="related">
+<span id="related"></span><h2>Related<a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
+<p>[REST API Reference - /exec/system](https://docs.lineratesystems.com/093Releas
+e_2.5/250REST_API_Reference_Guide/exec/system)</p>
+<p>CLI Reference Guide - [Upgrade Command](https://docs.lineratesystems.com/093Re
+lease_2.5/200CLI_Reference_Guide/Exec_Commands/Upgrade_Command)</p>
+</div>
+<div class="section" id="examples">
+<span id="examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>PUT</p>
+<p>curl -b cookie.jar &#8211;data &#64;data.json -k -H &#8220;Content-Type: application/json&#8221; -X
+PUT https://10.1.2.3:8443/lrs/api/v1.0/exec/system/util/upgrade</p>
+<p>PUT Response</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;httpResponseCode&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/exec/system/util/upgrade&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;recurse&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">}</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>/exec/system/util/upgrade
+1. Data Key<ol>
+<li>Data Type</li>
+<li>Default Value
+2. Default Allowed
+3. Request Methods
+4. Related
+5. Examples</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, F5 Networks.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

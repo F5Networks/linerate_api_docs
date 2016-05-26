@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>/status/ssh/details/allow/from/ &mdash; LineRate REST API  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LineRate REST API  documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> LineRate REST API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LineRate REST API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>/status/ssh/details/allow/from/<mask></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/v2.5.2/status/status_ssh_details_allow_to.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="status-ssh-details-allow-from-mask">
+<span id="status-ssh-details-allow-from-mask"></span><h1>/status/ssh/details/allow/from/<mask><a class="headerlink" href="#status-ssh-details-allow-from-mask" title="Permalink to this headline">¶</a></h1>
+<p>Use</p>
+<p>Use to view the configuration to permit SSH connections from the specified IP
+addresses to the F5® LineRate® system.</p>
+<div class="section" id="parameters">
+<span id="parameters"></span><h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>mask: Remote network mask&#8211;IPv4 or IPv6 address with subnet mask. Must use
+[standard F5® LineRate® IP address format](https://docs.lineratesystems.com/09
+3Release_2.5/250REST_API_Reference_Guide/000Getting_Started_with_the_REST_API/
+300Understanding_the_REST_Hierarchy#IP_Addresses) and modified CIDR notation.
+For example: 192.0.2.1 24. Do not use a slash before the subnet mask; use a
+space instead.</p>
+<p>A node called &#8220;any&#8221; is the default. This lets the system accept SSH
+connections from both IPv4 and IPv6 clients and overrides any &#8220;alllow from&#8221;
+addresses configured.</p>
+</div>
+<div class="section" id="data-key">
+<span id="data-key"></span><h2>Data Key<a class="headerlink" href="#data-key" title="Permalink to this headline">¶</a></h2>
+<p>The data key must match the IP address.</p>
+<div class="section" id="data-type">
+<span id="data-type"></span><h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
+<p>string</p>
+</div>
+<div class="section" id="default-data-value">
+<span id="default-data-value"></span><h3>Default Data Value<a class="headerlink" href="#default-data-value" title="Permalink to this headline">¶</a></h3>
+<p>&#8220;&#8221;</p>
+</div>
+</div>
+<div class="section" id="request-methods">
+<span id="request-methods"></span><h2>Request Methods<a class="headerlink" href="#request-methods" title="Permalink to this headline">¶</a></h2>
+<p>GET</p>
+</div>
+<div class="section" id="related">
+<span id="related"></span><h2>Related<a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
+<p>[REST API Reference - /status/ssh](https://docs.lineratesystems.com/093Release
+_2.5/250REST_API_Reference_Guide/config/ssh)</p>
+</div>
+<div class="section" id="examples">
+<span id="examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>GET</p>
+<p>curl -b cookie.jar -k
+https://10.1.2.3:8443/lrs/api/v1.0/status/ssh/details/allow/from/any</p>
+<p>GET Response</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;/status/ssh/details/allow/from/any&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;default&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">,</span>
+                                         <span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                         <span class="s2">&quot;data&quot;</span><span class="p">:</span><span class="s2">&quot;any&quot;</span><span class="p">,</span>
+                                         <span class="s2">&quot;numChildren&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+                                         <span class="s2">&quot;defaultAllowed&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">,</span>
+                                         <span class="s2">&quot;deleteAllowed&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">},</span>
+<span class="s2">&quot;httpResponseCode&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
+<span class="s2">&quot;requestPath&quot;</span><span class="p">:</span><span class="s2">&quot;/status/ssh/details/allow/from/any&quot;</span><span class="p">,</span>
+<span class="s2">&quot;recurse&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">}</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>/status/ssh/details/allow/from/<mask>
+1. Parameters
+2. Data Key<ol>
+<li>Data Type</li>
+<li>Default Data Value
+3. Request Methods
+4. Related
+5. Examples</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, F5 Networks.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>/status/npm/registry/&lt;reg_name&gt;/url &mdash; LineRate REST API  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LineRate REST API  documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> LineRate REST API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LineRate REST API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>/status/npm/registry/&lt;reg_name&gt;/url</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/v2.6.1/status/status_npm_registry_&lt;reg_name&gt;_url.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="status-npm-registry-reg-name-url">
+<span id="status-npm-registry-reg-name-url"></span><h1>/status/npm/registry/&lt;reg_name&gt;/url<a class="headerlink" href="#status-npm-registry-reg-name-url" title="Permalink to this headline">¶</a></h1>
+<p>Use</p>
+<p>Use to view the configured URL of a custom npm registry to use for installing
+Node Packaged Modules.</p>
+<div class="section" id="parameters">
+<span id="parameters"></span><h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>reg_name: Name of registry object</p>
+</div>
+<div class="section" id="data-key">
+<span id="data-key"></span><h2>Data Key<a class="headerlink" href="#data-key" title="Permalink to this headline">¶</a></h2>
+<p>The data key contains the registry URL.</p>
+<p>Note: When the default key is set to true, it means the object is set to its
+default. In this case, the system works as follows:</p>
+<ul class="simple">
+<li>On a PUT operation, the system ignores the data key. (Applicable only to /config nodes.)</li>
+<li>On a GET operation, the response only contains &#8220;default&#8221;: True and does not contain the data key.</li>
+<li>If the object has a base, it inherits its setting from its base.</li>
+</ul>
+<p>See [Setting Objects to Their Default](https://docs.lineratesystems.com/087Rel
+ease_2.6/250REST_API_Reference_Guide/000Getting_Started_with_the_REST_API/300U
+nderstanding_the_REST_Hierarchy#Setting_Objects_to_Their_Default_(Default_Key)
+).</p>
+<div class="section" id="data-type">
+<span id="data-type"></span><h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
+<p>string</p>
+</div>
+<div class="section" id="default-data-value">
+<span id="default-data-value"></span><h3>Default Data Value<a class="headerlink" href="#default-data-value" title="Permalink to this headline">¶</a></h3>
+<p>&#8220;&#8221;</p>
+<p>An object uses the default data value when one of the following is true:</p>
+<ul class="simple">
+<li>For objects without bases&#8211;When the object&#8217;s default key is true.</li>
+<li>For objects with bases&#8211;When the object&#8217;s default key is true, and when the default key is true for all of the object&#8217;s bases.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="default-allowed">
+<span id="default-allowed"></span><h2>Default Allowed<a class="headerlink" href="#default-allowed" title="Permalink to this headline">¶</a></h2>
+<p>True</p>
+</div>
+<div class="section" id="request-methods">
+<span id="request-methods"></span><h2>Request Methods<a class="headerlink" href="#request-methods" title="Permalink to this headline">¶</a></h2>
+<p>GET</p>
+</div>
+<div class="section" id="related">
+<span id="related"></span><h2>Related<a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
+<p>REST API Reference - [/config/npm](https://docs.lineratesystems.com/087Release
+_2.6/250REST_API_Reference_Guide/config/npm)</p>
+<p>CLI Reference - [Show Running Config Commands](https://docs.lineratesystems.co
+m/087Release_2.6/200CLI_Reference_Guide/Exec_Commands/Show_Commands/Show_Runni
+ng_Config_Commands)</p>
+</div>
+<div class="section" id="examples">
+<span id="examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>GET</p>
+<p>curl -b cookie.jar -k
+https://10.1.2.3:8443/lrs/api/v1.0/status/npm/registry/name/url</p>
+<p>GET Response</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;httpResponseCode&quot;</span><span class="p">:</span> <span class="mi">404</span><span class="p">,</span>
+ <span class="s2">&quot;internalResponseCode&quot;</span><span class="p">:</span> <span class="mi">101</span><span class="p">,</span>
+ <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Request failed: Unable to retrieve data from controller</span><span class="se">\n</span><span class="s2">  Path: /status/npm/registry/name/url</span><span class="se">\n</span><span class="s2">  ResponseCode: 101 (Path not found)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;recurse&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+ <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/status/npm/registry/name/url&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>/status/npm/registry/&lt;reg_name&gt;/url
+1. Parameters
+2. Data Key<ol>
+<li>Data Type</li>
+<li>Default Data Value
+3. Default Allowed
+4. Request Methods
+5. Related
+6. Examples</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, F5 Networks.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

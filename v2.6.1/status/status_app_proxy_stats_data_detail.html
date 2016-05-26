@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>/status/app/proxy/stats/data/detail &mdash; LineRate REST API  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LineRate REST API  documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> LineRate REST API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LineRate REST API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>/status/app/proxy/stats/data/detail</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/v2.6.1/status/status_app_proxy_stats_data_detail.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="status-app-proxy-stats-data-detail">
+<span id="status-app-proxy-stats-data-detail"></span><h1>/status/app/proxy/stats/data/detail<a class="headerlink" href="#status-app-proxy-stats-data-detail" title="Permalink to this headline">¶</a></h1>
+<p>Use</p>
+<p>Use to display statistics related to the load balancer, which includes
+combined, global statistics for the whole system.</p>
+<div class="section" id="data-key">
+<span id="data-key"></span><h2>Data Key<a class="headerlink" href="#data-key" title="Permalink to this headline">¶</a></h2>
+<p>The data key contains the statistics</p>
+<div class="section" id="data-type">
+<span id="data-type"></span><h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
+<p>string</p>
+</div>
+<div class="section" id="default-data-value">
+<span id="default-data-value"></span><h3>Default Data Value<a class="headerlink" href="#default-data-value" title="Permalink to this headline">¶</a></h3>
+<p>&#8220;&#8221;</p>
+</div>
+</div>
+<div class="section" id="request-methods">
+<span id="request-methods"></span><h2>Request Methods<a class="headerlink" href="#request-methods" title="Permalink to this headline">¶</a></h2>
+<p>GET</p>
+</div>
+<div class="section" id="related">
+<span id="related"></span><h2>Related<a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
+<p>REST API Reference - [summary](https://docs.lineratesystems.com/087Release_2.6
+/250REST_API_Reference_Guide/status/app/proxy/stats/data/summary)</p>
+<p>CLI Reference - [Show Proxy Commands](https://docs.lineratesystems.com/087Rele
+ase_2.6/200CLI_Reference_Guide/Exec_Commands/Show_Commands/Show_Proxy_Commands
+)</p>
+</div>
+<div class="section" id="examples">
+<span id="examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>GET</p>
+<p>curl -b cookie.jar -k
+https://10.1.2.3:8443/lrs/api/v1.0/status/app/proxy/stats/data/detail</p>
+<p>GET Response</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;/status/app/proxy/stats/data/detail&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;                   eventLoopTime: 0.000000</span><span class="se">\n</span><span class="s2">         eventLoopTime 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">         eventLoopTime 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">                      keventTime: 0.003937</span><span class="se">\n</span><span class="s2">            keventTime 1 Min Avg: 0.003937</span><span class="se">\n</span><span class="s2">            keventTime 5 Min Avg: 0.003926</span><span class="se">\n</span><span class="s2">                  connClientOpen: 0</span><span class="se">\n</span><span class="s2">              connClientReadSize: 0.000000</span><span class="se">\n</span><span class="s2">    connClientReadSize 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">    connClientReadSize 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">             connClientWriteSize: 0.000000</span><span class="se">\n</span><span class="s2">   connClientWriteSize 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">   connClientWriteSize 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">                   connAcceptMax: 0.000000</span><span class="se">\n</span><span class="s2">         connAcceptMax 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">         connAcceptMax 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">                    connAccepted: 0.000000</span><span class="se">\n</span><span class="s2">          connAccepted 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">          connAccepted 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">         connAcceptReportedAvail: 0.000000</span><span class="se">\n</span><span class="s2">connAcceptReportedAvail 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">connAcceptReportedAvail 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">        httpClientRequestLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpClientRequestLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpClientRequestLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">           httpClientRespLatency: 0.000000</span><span class="se">\n</span><span class="s2"> httpClientRespLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2"> httpClientRespLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">       httpClientRespInitLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpClientRespInitLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpClientRespInitLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">        httpClientXactionLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpClientXactionLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpClientXactionLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">               connClientBytesRx: 0</span><span class="se">\n</span><span class="s2">           connClientBytesRx/sec: 0</span><span class="se">\n</span><span class="s2"> connClientBytesRx/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2"> connClientBytesRx/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">     connClientBytesRx 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">               connClientBytesTx: 0</span><span class="se">\n</span><span class="s2">           connClientBytesTx/sec: 0</span><span class="se">\n</span><span class="s2"> connClientBytesTx/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2"> connClientBytesTx/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">     connClientBytesTx 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">            connClientSslBytesRx: 0</span><span class="se">\n</span><span class="s2">        connClientSslBytesRx/sec: 0</span><span class="se">\n</span><span class="s2">connClientSslBytesRx/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">connClientSslBytesRx/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">  connClientSslBytesRx 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">            connClientSslBytesTx: 0</span><span class="se">\n</span><span class="s2">        connClientSslBytesTx/sec: 0</span><span class="se">\n</span><span class="s2">connClientSslBytesTx/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">connClientSslBytesTx/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">  connClientSslBytesTx 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">                connAcceptEvents: 0</span><span class="se">\n</span><span class="s2">            connAcceptEvents/sec: 0</span><span class="se">\n</span><span class="s2">  connAcceptEvents/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">  connAcceptEvents/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">      connAcceptEvents 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">           connAcceptErrMaxConns: 0</span><span class="se">\n</span><span class="s2">       connAcceptErrMaxConns/sec: 0</span><span class="se">\n</span><span class="s2">connAcceptErrMaxConns/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">connAcceptErrMaxConns/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2"> connAcceptErrMaxConns 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">                connClientOpened: 0</span><span class="se">\n</span><span class="s2">            connClientOpened/sec: 0</span><span class="se">\n</span><span class="s2">  connClientOpened/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">  connClientOpened/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">      connClientOpened 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">                connClientClosed: 0</span><span class="se">\n</span><span class="s2">              connClientTimedOut: 0</span><span class="se">\n</span><span class="s2">                  connClientLost: 0</span><span class="se">\n</span><span class="s2">                 connClientReset: 0</span><span class="se">\n</span><span class="s2">               connClientRefused: 0</span><span class="se">\n</span><span class="s2">             connClientAddrInUse: 0</span><span class="se">\n</span><span class="s2">           connClientIdleTimeout: 0</span><span class="se">\n</span><span class="s2">              connClientFiltered: 0</span><span class="se">\n</span><span class="s2">          connClientFiltered/sec: 0</span><span class="se">\n</span><span class="s2">connClientFiltered/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">connClientFiltered/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">    connClientFiltered 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">      connClientErrorSslRequired: 0</span><span class="se">\n</span><span class="s2">            connClientSslAttempt: 0</span><span class="se">\n</span><span class="s2">             connClientSslOpened: 0</span><span class="se">\n</span><span class="s2">             connClientSslFailed: 0</span><span class="se">\n</span><span class="s2">                 clientNoVserver: 0</span><span class="se">\n</span><span class="s2">              httpClientRequests: 0</span><span class="se">\n</span><span class="s2">          httpClientRequests/sec: 0</span><span class="se">\n</span><span class="s2">httpClientRequests/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpClientRequests/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">    httpClientRequests 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">          httpClientRequestsGood: 0</span><span class="se">\n</span><span class="s2">           httpClientRequestsBad: 0</span><span class="se">\n</span><span class="s2">     httpClientRequestsForbidden: 0</span><span class="se">\n</span><span class="s2">                  httpClientResp: 0</span><span class="se">\n</span><span class="s2">           httpClientRespStarted: 0</span><span class="se">\n</span><span class="s2">           httpClientRespTimeout: 0</span><span class="se">\n</span><span class="s2">      httpInternalRespAttempt5xx: 0</span><span class="se">\n</span><span class="s2">  httpInternalRespAttempt5xx/sec: 0</span><span class="se">\n</span><span class="s2">httpInternalRespAttempt5xx/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpInternalRespAttempt5xx/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpInternalRespAttempt5xx 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp100: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp101: 0</span><span class="se">\n</span><span class="s2">        httpInternalResp100Other: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp200: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp201: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp202: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp203: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp204: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp205: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp206: 0</span><span class="se">\n</span><span class="s2">        httpInternalResp200Other: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp300: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp301: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp302: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp303: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp304: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp305: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp306: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp307: 0</span><span class="se">\n</span><span class="s2">        httpInternalResp300Other: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp400: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp401: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp402: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp403: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp404: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp405: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp406: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp407: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp408: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp409: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp410: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp411: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp412: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp413: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp414: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp415: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp416: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp417: 0</span><span class="se">\n</span><span class="s2">        httpInternalResp400Other: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp500: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp501: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp502: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp503: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp504: 0</span><span class="se">\n</span><span class="s2">             httpInternalResp505: 0</span><span class="se">\n</span><span class="s2">        httpInternalResp500Other: 0</span><span class="se">\n</span><span class="s2">        httpInternalRespAllOther: 0</span><span class="se">\n</span><span class="s2">       httpClientRespIdleTimeout: 0</span><span class="se">\n</span><span class="s2">       httpClientConnectRequests: 0</span><span class="se">\n</span><span class="s2">httpClientConnectRequestsForbidden: 0</span><span class="se">\n</span><span class="s2">    httpClientRequestIdleTimeout: 0</span><span class="se">\n</span><span class="s2">        maxEmbryonicConnsDropped: 0</span><span class="se">\n</span><span class="s2">                  connServerOpen: 0</span><span class="se">\n</span><span class="s2">             connServerQueueSize: 0</span><span class="se">\n</span><span class="s2">   connServerQueueSize 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">   connServerQueueSize 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">          httpConnectTunnelsOpen: 0</span><span class="se">\n</span><span class="s2">              connServerReadSize: 0.000000</span><span class="se">\n</span><span class="s2">    connServerReadSize 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">    connServerReadSize 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">             connServerWriteSize: 0.000000</span><span class="se">\n</span><span class="s2">   connServerWriteSize 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">   connServerWriteSize 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">        httpServerRequestLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpServerRequestLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpServerRequestLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">    httpServerRequestInitLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpServerRequestInitLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpServerRequestInitLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">           httpServerRespLatency: 0.000000</span><span class="se">\n</span><span class="s2"> httpServerRespLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2"> httpServerRespLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">        httpServerXactionLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpServerXactionLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpServerXactionLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">               connServerBytesRx: 0</span><span class="se">\n</span><span class="s2">           connServerBytesRx/sec: 0</span><span class="se">\n</span><span class="s2"> connServerBytesRx/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2"> connServerBytesRx/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">     connServerBytesRx 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">               connServerBytesTx: 0</span><span class="se">\n</span><span class="s2">           connServerBytesTx/sec: 0</span><span class="se">\n</span><span class="s2"> connServerBytesTx/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2"> connServerBytesTx/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">     connServerBytesTx 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">                connServerOpened: 0</span><span class="se">\n</span><span class="s2">            connServerOpened/sec: 0</span><span class="se">\n</span><span class="s2">  connServerOpened/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">  connServerOpened/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">      connServerOpened 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">                connServerClosed: 0</span><span class="se">\n</span><span class="s2">              connServerTimedOut: 0</span><span class="se">\n</span><span class="s2">                  connServerLost: 0</span><span class="se">\n</span><span class="s2">                 connServerReset: 0</span><span class="se">\n</span><span class="s2">               connServerRefused: 0</span><span class="se">\n</span><span class="s2">             connServerAddrInUse: 0</span><span class="se">\n</span><span class="s2">              connServerEarlyEOF: 0</span><span class="se">\n</span><span class="s2">           connServerIdleTimeout: 0</span><span class="se">\n</span><span class="s2">     connServerClientClosedEarly: 0</span><span class="se">\n</span><span class="s2">         connServerNeedMoreConns: 0</span><span class="se">\n</span><span class="s2">             connServerInitiated: 0</span><span class="se">\n</span><span class="s2">              httpServerRequests: 0</span><span class="se">\n</span><span class="s2">          httpServerRequests/sec: 0</span><span class="se">\n</span><span class="s2">httpServerRequests/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpServerRequests/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">    httpServerRequests 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">                  httpServerResp: 0</span><span class="se">\n</span><span class="s2">              httpServerResp/sec: 0</span><span class="se">\n</span><span class="s2">    httpServerResp/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">    httpServerResp/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">        httpServerResp 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">               httpServerResp100: 0</span><span class="se">\n</span><span class="s2">               httpServerResp101: 0</span><span class="se">\n</span><span class="s2">          httpServerResp100Other: 0</span><span class="se">\n</span><span class="s2">               httpServerResp200: 0</span><span class="se">\n</span><span class="s2">               httpServerResp201: 0</span><span class="se">\n</span><span class="s2">               httpServerResp202: 0</span><span class="se">\n</span><span class="s2">               httpServerResp203: 0</span><span class="se">\n</span><span class="s2">               httpServerResp204: 0</span><span class="se">\n</span><span class="s2">               httpServerResp205: 0</span><span class="se">\n</span><span class="s2">               httpServerResp206: 0</span><span class="se">\n</span><span class="s2">          httpServerResp200Other: 0</span><span class="se">\n</span><span class="s2">               httpServerResp300: 0</span><span class="se">\n</span><span class="s2">               httpServerResp301: 0</span><span class="se">\n</span><span class="s2">               httpServerResp302: 0</span><span class="se">\n</span><span class="s2">               httpServerResp303: 0</span><span class="se">\n</span><span class="s2">               httpServerResp304: 0</span><span class="se">\n</span><span class="s2">               httpServerResp305: 0</span><span class="se">\n</span><span class="s2">               httpServerResp306: 0</span><span class="se">\n</span><span class="s2">               httpServerResp307: 0</span><span class="se">\n</span><span class="s2">          httpServerResp300Other: 0</span><span class="se">\n</span><span class="s2">               httpServerResp400: 0</span><span class="se">\n</span><span class="s2">               httpServerResp401: 0</span><span class="se">\n</span><span class="s2">               httpServerResp402: 0</span><span class="se">\n</span><span class="s2">               httpServerResp403: 0</span><span class="se">\n</span><span class="s2">               httpServerResp404: 0</span><span class="se">\n</span><span class="s2">               httpServerResp405: 0</span><span class="se">\n</span><span class="s2">               httpServerResp406: 0</span><span class="se">\n</span><span class="s2">               httpServerResp407: 0</span><span class="se">\n</span><span class="s2">               httpServerResp408: 0</span><span class="se">\n</span><span class="s2">               httpServerResp409: 0</span><span class="se">\n</span><span class="s2">               httpServerResp410: 0</span><span class="se">\n</span><span class="s2">               httpServerResp411: 0</span><span class="se">\n</span><span class="s2">               httpServerResp412: 0</span><span class="se">\n</span><span class="s2">               httpServerResp413: 0</span><span class="se">\n</span><span class="s2">               httpServerResp414: 0</span><span class="se">\n</span><span class="s2">               httpServerResp415: 0</span><span class="se">\n</span><span class="s2">               httpServerResp416: 0</span><span class="se">\n</span><span class="s2">               httpServerResp417: 0</span><span class="se">\n</span><span class="s2">          httpServerResp400Other: 0</span><span class="se">\n</span><span class="s2">               httpServerResp500: 0</span><span class="se">\n</span><span class="s2">               httpServerResp501: 0</span><span class="se">\n</span><span class="s2">               httpServerResp502: 0</span><span class="se">\n</span><span class="s2">               httpServerResp503: 0</span><span class="se">\n</span><span class="s2">               httpServerResp504: 0</span><span class="se">\n</span><span class="s2">               httpServerResp505: 0</span><span class="se">\n</span><span class="s2">          httpServerResp500Other: 0</span><span class="se">\n</span><span class="s2">          httpServerRespAllOther: 0</span><span class="se">\n</span><span class="s2">              httpServerRespGood: 0</span><span class="se">\n</span><span class="s2">               httpServerRespBad: 0</span><span class="se">\n</span><span class="s2">     httpServerRequestsAbandoned: 0</span><span class="se">\n</span><span class="s2">        httpServerRespExtraneous: 0</span><span class="se">\n</span><span class="s2">         httpServerRespAbandoned: 0</span><span class="se">\n</span><span class="s2">           httpServerRespTimeout: 0</span><span class="se">\n</span><span class="s2">         httpServerErrRxRespBody: 0</span><span class="se">\n</span><span class="s2">       httpServerRespIdleTimeout: 0</span><span class="se">\n</span><span class="s2">     httpServerRequestsForbidden: 0</span><span class="se">\n</span><span class="s2">       httpServerConnectRequests: 0</span><span class="se">\n</span><span class="s2">httpServerConnectRequestsAbandoned: 0</span><span class="se">\n</span><span class="s2">    httpConnectClientClosedEarly: 0</span><span class="se">\n</span><span class="s2">        httpConnectTunnelsOpened: 0</span><span class="se">\n</span><span class="s2">    httpConnectTunnelsOpened/sec: 0</span><span class="se">\n</span><span class="s2">httpConnectTunnelsOpened/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpConnectTunnelsOpened/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpConnectTunnelsOpened 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">        httpConnectTunnelsClosed: 0</span><span class="se">\n</span><span class="s2">httpServerConnectRequestsForbidden: 0</span><span class="se">\n</span><span class="s2">     httpServerConnectRespNot2xx: 0</span><span class="se">\n</span><span class="s2">        httpServerConnectRespBad: 0</span><span class="se">\n</span><span class="s2">  httpServerConnectRespAbandoned: 0</span><span class="se">\n</span><span class="s2">    httpServerConnectRespTimeout: 0</span><span class="se">\n</span><span class="s2">    httpConnectTunnelIdleTimeout: 0</span><span class="se">\n</span><span class="s2">    httpServerRequestIdleTimeout: 0</span><span class="se">\n</span><span class="s2">httpServerConnectRequestIdleTimeout: 0</span><span class="se">\n</span><span class="s2">httpServerConnectRespIdleTimeout: 0</span><span class="se">\n</span><span class="s2">      httpVSServerRequestLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpVSServerRequestLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpVSServerRequestLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">  httpVSServerRequestInitLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpVSServerRequestInitLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpVSServerRequestInitLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">         httpVSServerRespLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpVSServerRespLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpVSServerRespLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">      httpVSServerXactionLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpVSServerXactionLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpVSServerXactionLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">      httpVSClientRequestLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpVSClientRequestLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpVSClientRequestLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">         httpVSClientRespLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpVSClientRespLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpVSClientRespLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">     httpVSClientRespInitLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpVSClientRespInitLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpVSClientRespInitLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">      httpVSClientXactionLatency: 0.000000</span><span class="se">\n</span><span class="s2">httpVSClientXactionLatency 1 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">httpVSClientXactionLatency 5 Min Avg: 0.000000</span><span class="se">\n</span><span class="s2">               vsServerQueueSize: 0</span><span class="se">\n</span><span class="s2">     vsServerQueueSize 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">     vsServerQueueSize 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">           vsRequestMgrQueueSize: 0</span><span class="se">\n</span><span class="s2"> vsRequestMgrQueueSize 1 Min Avg: 0</span><span class="se">\n</span><span class="s2"> vsRequestMgrQueueSize 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">                vsTotalQueueSize: 0</span><span class="se">\n</span><span class="s2">      vsTotalQueueSize 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">      vsTotalQueueSize 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">        httpVSConnectTunnelsOpen: 0</span><span class="se">\n</span><span class="s2">            connVSServerEarlyEOF: 0</span><span class="se">\n</span><span class="s2">   connVSServerClientClosedEarly: 0</span><span class="se">\n</span><span class="s2">              vsNoRequestManager: 0</span><span class="se">\n</span><span class="s2">      vsRequestMgrDemandExceeded: 0</span><span class="se">\n</span><span class="s2">          httpVSReissuedRequests: 0</span><span class="se">\n</span><span class="s2">      httpVSReissuedRequests/sec: 0</span><span class="se">\n</span><span class="s2">httpVSReissuedRequests/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpVSReissuedRequests/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpVSReissuedRequests 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">           httpVSReissuesDropped: 0</span><span class="se">\n</span><span class="s2">          vsServerL4ConnRequests: 0</span><span class="se">\n</span><span class="s2">      vsServerL4ConnRequests/sec: 0</span><span class="se">\n</span><span class="s2">vsServerL4ConnRequests/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">vsServerL4ConnRequests/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">vsServerL4ConnRequests 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">        vsServerL4ConnSuccessful: 0</span><span class="se">\n</span><span class="s2">    vsServerL4ConnSuccessful/sec: 0</span><span class="se">\n</span><span class="s2">vsServerL4ConnSuccessful/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">vsServerL4ConnSuccessful/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">vsServerL4ConnSuccessful 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">            httpVSServerRequests: 0</span><span class="se">\n</span><span class="s2">        httpVSServerRequests/sec: 0</span><span class="se">\n</span><span class="s2">httpVSServerRequests/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpVSServerRequests/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">  httpVSServerRequests 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">                httpVSServerResp: 0</span><span class="se">\n</span><span class="s2">            httpVSServerResp/sec: 0</span><span class="se">\n</span><span class="s2">  httpVSServerResp/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">  httpVSServerResp/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">      httpVSServerResp 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">            httpVSServerRespGood: 0</span><span class="se">\n</span><span class="s2">             httpVSServerRespBad: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp100: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp101: 0</span><span class="se">\n</span><span class="s2">        httpVSServerResp100Other: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp200: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp201: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp202: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp203: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp204: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp205: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp206: 0</span><span class="se">\n</span><span class="s2">        httpVSServerResp200Other: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp300: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp301: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp302: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp303: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp304: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp305: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp306: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp307: 0</span><span class="se">\n</span><span class="s2">        httpVSServerResp300Other: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp400: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp401: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp402: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp403: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp404: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp405: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp406: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp407: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp408: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp409: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp410: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp411: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp412: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp413: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp414: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp415: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp416: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp417: 0</span><span class="se">\n</span><span class="s2">        httpVSServerResp400Other: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp500: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp501: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp502: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp503: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp504: 0</span><span class="se">\n</span><span class="s2">             httpVSServerResp505: 0</span><span class="se">\n</span><span class="s2">        httpVSServerResp500Other: 0</span><span class="se">\n</span><span class="s2">        httpVSServerRespAllOther: 0</span><span class="se">\n</span><span class="s2">   httpVSServerRequestsAbandoned: 0</span><span class="se">\n</span><span class="s2">      httpVSServerRespExtraneous: 0</span><span class="se">\n</span><span class="s2">       httpVSServerRespAbandoned: 0</span><span class="se">\n</span><span class="s2">         httpVSServerRespTimeout: 0</span><span class="se">\n</span><span class="s2">       httpVSServerErrRxRespBody: 0</span><span class="se">\n</span><span class="s2">   httpVSServerRequestsForbidden: 0</span><span class="se">\n</span><span class="s2">     httpVSServerRespIdleTimeout: 0</span><span class="se">\n</span><span class="s2">     httpVSServerConnectRequests: 0</span><span class="se">\n</span><span class="s2">httpVSServerConnectRequestsAbandoned: 0</span><span class="se">\n</span><span class="s2">  httpVSConnectClientClosedEarly: 0</span><span class="se">\n</span><span class="s2">      httpVSConnectTunnelsOpened: 0</span><span class="se">\n</span><span class="s2">  httpVSConnectTunnelsOpened/sec: 0</span><span class="se">\n</span><span class="s2">httpVSConnectTunnelsOpened/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpVSConnectTunnelsOpened/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpVSConnectTunnelsOpened 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">      httpVSConnectTunnelsClosed: 0</span><span class="se">\n</span><span class="s2">httpVSServerConnectRequestsForbidden: 0</span><span class="se">\n</span><span class="s2">   httpVSServerConnectRespNot2xx: 0</span><span class="se">\n</span><span class="s2">      httpVSServerConnectRespBad: 0</span><span class="se">\n</span><span class="s2">httpVSServerConnectRespAbandoned: 0</span><span class="se">\n</span><span class="s2">  httpVSServerConnectRespTimeout: 0</span><span class="se">\n</span><span class="s2">  httpVSConnectTunnelIdleTimeout: 0</span><span class="se">\n</span><span class="s2">httpVSServerConnectRespIdleTimeout: 0</span><span class="se">\n</span><span class="s2">          vsClientL4ConnRequests: 0</span><span class="se">\n</span><span class="s2">      vsClientL4ConnRequests/sec: 0</span><span class="se">\n</span><span class="s2">vsClientL4ConnRequests/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">vsClientL4ConnRequests/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">vsClientL4ConnRequests 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">            httpVSClientRequests: 0</span><span class="se">\n</span><span class="s2">        httpVSClientRequests/sec: 0</span><span class="se">\n</span><span class="s2">httpVSClientRequests/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpVSClientRequests/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">  httpVSClientRequests 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">        httpVSClientRequestsGood: 0</span><span class="se">\n</span><span class="s2">         httpVSClientRequestsBad: 0</span><span class="se">\n</span><span class="s2">   httpVSClientRequestsForbidden: 0</span><span class="se">\n</span><span class="s2">                httpVSClientResp: 0</span><span class="se">\n</span><span class="s2">         httpVSClientRespTimeout: 0</span><span class="se">\n</span><span class="s2">    httpVSInternalRespAttempt5xx: 0</span><span class="se">\n</span><span class="s2">httpVSInternalRespAttempt5xx/sec: 0</span><span class="se">\n</span><span class="s2">httpVSInternalRespAttempt5xx/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpVSInternalRespAttempt5xx/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpVSInternalRespAttempt5xx 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">     httpVSClientRespIdleTimeout: 0</span><span class="se">\n</span><span class="s2">     httpVSClientConnectRequests: 0</span><span class="se">\n</span><span class="s2">httpVSClientConnectRequestsForbidden: 0</span><span class="se">\n</span><span class="s2">  httpVSServerRequestIdleTimeout: 0</span><span class="se">\n</span><span class="s2">httpVSServerConnectRequestIdleTimeout: 0</span><span class="se">\n</span><span class="s2">  httpVSClientRequestIdleTimeout: 0</span><span class="se">\n</span><span class="s2">       httpVSRequestRateLimit503: 0</span><span class="se">\n</span><span class="s2">   httpVSRequestRateLimit503/sec: 0</span><span class="se">\n</span><span class="s2">httpVSRequestRateLimit503/sec 1 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpVSRequestRateLimit503/sec 5 Min Avg: 0</span><span class="se">\n</span><span class="s2">httpVSRequestRateLimit503 5 Sec Ago: 0</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+                                          <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                                          <span class="s2">&quot;defaultAllowed&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                                          <span class="s2">&quot;deleteAllowed&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                                          <span class="s2">&quot;numChildren&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                                          <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">},</span>
+ <span class="s2">&quot;httpResponseCode&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+ <span class="s2">&quot;recurse&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+ <span class="s2">&quot;requestPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/status/app/proxy/stats/data/detail&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>/status/app/proxy/stats/data/detail
+1. Data Key<ol>
+<li>Data Type</li>
+<li>Default Data Value
+2. Request Methods
+3. Related
+4. Examples</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, F5 Networks.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
