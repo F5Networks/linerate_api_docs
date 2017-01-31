@@ -1,125 +1,172 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>/status/ip/statistics/v6 &mdash; LineRate REST API  documentation</title>
-  
 
-  
-  
 
-  
 
-  
-  
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>/status/ip/statistics/v6 &mdash; LineRate API documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     
 
-  
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootswatch-cosmo.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" href="../../_static/css/adjust_theme/bootswatch-cosmo.css" type="text/css" />
 
-  
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
 
-  
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
 
-  
-    <link rel="top" title="LineRate REST API  documentation" href="../../index.html"/> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
-
-          
-            <a href="../../index.html" class="icon icon-home"> LineRate REST API
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="LineRate API documentation" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">LineRate API documentation</a>
         </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul class="simple">
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">/status/ip/statistics/v6</a><ul>
+<li><a class="reference internal" href="#data-key">Data Key</a><ul>
+<li><a class="reference internal" href="#data-type">Data Type</a></li>
+<li><a class="reference internal" href="#default-data-value">Default Data Value</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#request-methods">Request Methods</a></li>
+<li><a class="reference internal" href="#related">Related</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
 </ul>
 
+                </ul>
+              </li>
+
             
-          
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/v2.6.1/status/status_ip_statistics_v6.md.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
         </div>
       </div>
-    </nav>
+    </div>
+    
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+    <!-- container -->
+    <div class="container-fluid">
 
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">LineRate REST API</a>
-      </nav>
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">/status/ip/statistics/v6</a><ul>
+<li><a class="reference internal" href="#data-key">Data Key</a><ul>
+<li><a class="reference internal" href="#data-type">Data Type</a></li>
+<li><a class="reference internal" href="#default-data-value">Default Data Value</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#request-methods">Request Methods</a></li>
+<li><a class="reference internal" href="#related">Related</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
 
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
- 
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
-    <li>/status/ip/statistics/v6</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="../../_sources/v2.6.1/status/status_ip_statistics_v6.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-  </ul>
-  <hr/>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/v2.6.1/status/status_ip_statistics_v6.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
   <div class="section" id="status-ip-statistics-v6">
 <span id="status-ip-statistics-v6"></span><h1>/status/ip/statistics/v6<a class="headerlink" href="#status-ip-statistics-v6" title="Permalink to this headline">¶</a></h1>
 <p>View IPv6 statistics.</p>
@@ -188,7 +235,7 @@ _Commands/Show_Commands/Show_IP_Commands)</p>
 <p>curl -b cookie.jar -k
 https://10.1.2.3:8443/lrs/api/v1.0/status/ip/statistics/v6</p>
 <p>GET Response</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;/status/ip/statistics/v6&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">u&quot;IPv6 statistics:</span><span class="se">\n</span><span class="s2">IP statistics:</span><span class="se">\n</span><span class="s2">  Rcvd:  21382 total, 0 local destination</span><span class="se">\n</span><span class="s2">         0 format errors, 0 bad hop count</span><span class="se">\n</span><span class="s2">         20328 not a gateway</span><span class="se">\n</span><span class="s2">         0 security failures, 0 bad options, 0 with options</span><span class="se">\n</span><span class="s2">  Frags: 0 reassembled, 0 timeouts, 0 couldn&quot;</span><span class="n">t</span> <span class="n">reassemble</span>\<span class="n">n</span>         <span class="mi">0</span> <span class="n">fragmented</span><span class="p">,</span> <span class="mi">0</span> <span class="n">fragments</span><span class="p">,</span> <span class="mi">0</span> <span class="n">couldn</span><span class="s2">&quot;t fragment</span><span class="se">\n</span><span class="s2">  Sent:  616 generated, 0 forwarded</span><span class="se">\n</span><span class="s2">         0 no route, 0 unicast RPF, 0 forced drop</span><span class="se">\n</span><span class="s2">         0 options denied</span><span class="se">\n</span><span class="s2">  Drop:  0 insufficient buffers</span><span class="se">\n\n</span><span class="s2">ICMPv6 statistics:</span><span class="se">\n</span><span class="s2">  Rcvd: 0 checksum errors, 0 too short, 0 bad length, 0 bad code</span><span class="se">\n</span><span class="s2">        unreach: 0 route, 0 admin, 0 scope, 0 address, 407 port</span><span class="se">\n</span><span class="s2">        parameter: 0 error, 0 header, 0 option</span><span class="se">\n</span><span class="s2">        0 reassembly timeout, 0 too big</span><span class="se">\n</span><span class="s2">        0 echo request, 0 echo reply</span><span class="se">\n</span><span class="s2">        406 group query, 0 group report, 0 group reduce</span><span class="se">\n</span><span class="s2">        0 router solicit, 0 router advert, 0 redirects</span><span class="se">\n</span><span class="s2">        103 neighbor solicit, 138 neighbor advert</span><span class="se">\n</span><span class="s2">  Sent: 0 rate limited</span><span class="se">\n</span><span class="s2">        unreach: 0 route, 0 admin, 0 scope, 0 address, 0 port</span><span class="se">\n</span><span class="s2">        parameter: 0 error, 0 header, 0 option</span><span class="se">\n</span><span class="s2">        0 reassembly timeout, 0 too big</span><span class="se">\n</span><span class="s2">        0 echo request, 0 echo reply</span><span class="se">\n</span><span class="s2">        0 group query, 411 group report, 0 group reduce</span><span class="se">\n</span><span class="s2">        0 router solicit, 0 router advert, 0 redirects</span><span class="se">\n</span><span class="s2">        102 neighbor solicit, 103 neighbor advert</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;/status/ip/statistics/v6&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="sa">u</span><span class="s2">&quot;IPv6 statistics:</span><span class="se">\n</span><span class="s2">IP statistics:</span><span class="se">\n</span><span class="s2">  Rcvd:  21382 total, 0 local destination</span><span class="se">\n</span><span class="s2">         0 format errors, 0 bad hop count</span><span class="se">\n</span><span class="s2">         20328 not a gateway</span><span class="se">\n</span><span class="s2">         0 security failures, 0 bad options, 0 with options</span><span class="se">\n</span><span class="s2">  Frags: 0 reassembled, 0 timeouts, 0 couldn&quot;</span><span class="n">t</span> <span class="n">reassemble</span>\<span class="n">n</span>         <span class="mi">0</span> <span class="n">fragmented</span><span class="p">,</span> <span class="mi">0</span> <span class="n">fragments</span><span class="p">,</span> <span class="mi">0</span> <span class="n">couldn</span><span class="s2">&quot;t fragment</span><span class="se">\n</span><span class="s2">  Sent:  616 generated, 0 forwarded</span><span class="se">\n</span><span class="s2">         0 no route, 0 unicast RPF, 0 forced drop</span><span class="se">\n</span><span class="s2">         0 options denied</span><span class="se">\n</span><span class="s2">  Drop:  0 insufficient buffers</span><span class="se">\n\n</span><span class="s2">ICMPv6 statistics:</span><span class="se">\n</span><span class="s2">  Rcvd: 0 checksum errors, 0 too short, 0 bad length, 0 bad code</span><span class="se">\n</span><span class="s2">        unreach: 0 route, 0 admin, 0 scope, 0 address, 407 port</span><span class="se">\n</span><span class="s2">        parameter: 0 error, 0 header, 0 option</span><span class="se">\n</span><span class="s2">        0 reassembly timeout, 0 too big</span><span class="se">\n</span><span class="s2">        0 echo request, 0 echo reply</span><span class="se">\n</span><span class="s2">        406 group query, 0 group report, 0 group reduce</span><span class="se">\n</span><span class="s2">        0 router solicit, 0 router advert, 0 redirects</span><span class="se">\n</span><span class="s2">        103 neighbor solicit, 138 neighbor advert</span><span class="se">\n</span><span class="s2">  Sent: 0 rate limited</span><span class="se">\n</span><span class="s2">        unreach: 0 route, 0 admin, 0 scope, 0 address, 0 port</span><span class="se">\n</span><span class="s2">        parameter: 0 error, 0 header, 0 option</span><span class="se">\n</span><span class="s2">        0 reassembly timeout, 0 too big</span><span class="se">\n</span><span class="s2">        0 echo request, 0 echo reply</span><span class="se">\n</span><span class="s2">        0 group query, 411 group report, 0 group reduce</span><span class="se">\n</span><span class="s2">        0 router solicit, 0 router advert, 0 redirects</span><span class="se">\n</span><span class="s2">        102 neighbor solicit, 103 neighbor advert</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
                                <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
                                <span class="s2">&quot;defaultAllowed&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
                                <span class="s2">&quot;deleteAllowed&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
@@ -214,61 +261,40 @@ https://10.1.2.3:8443/lrs/api/v1.0/status/ip/statistics/v6</p>
 </div>
 
 
-           </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2016, F5 Networks.
-
-    </p>
-  </div> 
-
-</footer>
-
         </div>
-      </div>
+        
+        
+      </div><!-- /row -->
 
-    </section>
-
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../index.html">LineRate API documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
   </div>
-  
+</div>
+      </div><!-- /row -->
 
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2017 F5 Networks.
+      </footer>
+      <!-- /footer -->
 
-  
+    </div>
+    <!-- /container -->
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+  </body>
 </html>
