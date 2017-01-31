@@ -1,3 +1,5 @@
+## /config/app/health/monitor/<name>/adminStatus
+
 The nodes below this one perform the functions described in this function
 overview.
 

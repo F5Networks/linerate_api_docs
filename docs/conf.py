@@ -29,7 +29,7 @@ import sphinx_rtd_theme
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = ['sphinxjp.themes.basicstrap']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = []
@@ -55,7 +55,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'LineRate REST API'
-copyright = u'2016, F5 Networks'
+copyright = u'2017 F5 Networks'
 author = u'F5 Networks'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -117,19 +117,27 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinx_rtd_theme'
+
+html_theme = 'basicstrap'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {}
 
+html_theme_options = {
+    'header_inverse': False,
+    'relbar_inverse': False,
+    'inner_theme': True,
+    'inner_theme_name': 'bootswatch-cosmo',
+}
+
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
-#html_title = u'LineRate API'
+html_title = 'LineRate API documentation'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
